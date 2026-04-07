@@ -1,0 +1,1014 @@
+{
+  "totalScore": 142,
+  "percentage": "94.7",
+  "results": [
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-03-15",
+        "vendor": "Amazon Web Services",
+        "amount_gross": 120,
+        "amount_net": 100.84,
+        "tax_rate": 19,
+        "invoice_number": "Services",
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-02-28",
+        "vendor": "Hetzner",
+        "amount_gross": 89.25,
+        "amount_net": 75,
+        "tax_rate": 19,
+        "invoice_number": "H-2024-02-5678",
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 4,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": false,
+          "reason": "30 ≠ 35.7"
+        },
+        {
+          "name": "Amount Net",
+          "pass": false,
+          "reason": "25.21 ≠ 30"
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-01-10",
+        "vendor": "DigitalOcean",
+        "amount_gross": 30,
+        "amount_net": 25.21,
+        "tax_rate": 19,
+        "invoice_number": "DO-2024-01-9012",
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2023-12-20",
+        "vendor": "GitHub",
+        "amount_gross": 59.5,
+        "amount_net": 50,
+        "tax_rate": 19,
+        "invoice_number": "GH-2023-12-3456",
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 5,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": false,
+          "reason": "No net amount"
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-04-01",
+        "vendor": "Netlify",
+        "amount_gross": 23.8,
+        "amount_net": null,
+        "tax_rate": 19,
+        "invoice_number": "NTL-2024-04-7890",
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-03-20",
+        "vendor": "REWE",
+        "amount_gross": 47.32,
+        "amount_net": null,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-02-15",
+        "vendor": "dm-drogerie",
+        "amount_gross": 28.97,
+        "amount_net": null,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-01-08",
+        "vendor": "EDEKA",
+        "amount_gross": 63.14,
+        "amount_net": null,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2023-12-12",
+        "vendor": "Rossmann",
+        "amount_gross": 19.48,
+        "amount_net": null,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-04-05",
+        "vendor": "ALDI",
+        "amount_gross": 34.56,
+        "amount_net": null,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-03-10",
+        "vendor": "Taxi",
+        "amount_gross": 22.5,
+        "amount_net": 18.91,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-02-20",
+        "vendor": "Parkhaus",
+        "amount_gross": 8,
+        "amount_net": 6.72,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-01-15",
+        "vendor": "Müller",
+        "amount_gross": 150,
+        "amount_net": 126.05,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 5,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": false,
+          "reason": "No amount extracted"
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2023-12-05",
+        "vendor": "Elektro Schmidt",
+        "amount_gross": null,
+        "amount_net": 80,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 0.75
+      }
+    },
+    {
+      "score": 5,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": false,
+          "reason": "No net amount"
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-03-25",
+        "vendor": "Charity",
+        "amount_gross": 50,
+        "amount_net": null,
+        "tax_rate": 0,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-03-12",
+        "vendor": "Amazon EU S.a.r.L AMAZON.DE",
+        "amount_gross": 89.99,
+        "amount_net": null,
+        "tax_rate": null,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 0.7
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-02-08",
+        "vendor": "Google Ireland Limited",
+        "amount_gross": 14.99,
+        "amount_net": null,
+        "tax_rate": null,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 0.7
+      }
+    },
+    {
+      "score": 5,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": false,
+          "reason": "39 ≠ 39.99"
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-01-20",
+        "vendor": "Vodafone GmbH",
+        "amount_gross": 39,
+        "amount_net": null,
+        "tax_rate": null,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 0.7
+      }
+    },
+    {
+      "score": 5,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": false,
+          "reason": "49 ≠ 49.95"
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2023-12-15",
+        "vendor": "Telekom Deutschland GmbH",
+        "amount_gross": 49,
+        "amount_net": null,
+        "tax_rate": null,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 0.7
+      }
+    },
+    {
+      "score": 5,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": false,
+          "reason": "No vendor"
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-04-02",
+        "vendor": null,
+        "amount_gross": 69,
+        "amount_net": null,
+        "tax_rate": null,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 0.7
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2023-10-10",
+        "vendor": "Penny",
+        "amount_gross": 18.27,
+        "amount_net": null,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-03-05",
+        "vendor": "Tankstelle",
+        "amount_gross": 65.8,
+        "amount_net": 55.29,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-01-25",
+        "vendor": "Apotheke",
+        "amount_gross": 12.45,
+        "amount_net": 10.46,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2023-11-18",
+        "vendor": "Baumarkt",
+        "amount_gross": 127.6,
+        "amount_net": 107.23,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    },
+    {
+      "score": 6,
+      "maxScore": 6,
+      "evals": [
+        {
+          "name": "Date",
+          "pass": true
+        },
+        {
+          "name": "Amount Gross",
+          "pass": true
+        },
+        {
+          "name": "Amount Net",
+          "pass": true
+        },
+        {
+          "name": "Vendor",
+          "pass": true
+        },
+        {
+          "name": "Tax Rate",
+          "pass": true
+        },
+        {
+          "name": "Confidence",
+          "pass": true
+        }
+      ],
+      "extracted": {
+        "date": "2024-02-28",
+        "vendor": "Restaurant",
+        "amount_gross": 42.5,
+        "amount_net": 35.71,
+        "tax_rate": 19,
+        "invoice_number": null,
+        "currency": "EUR",
+        "confidence": 1
+      }
+    }
+  ]
+}

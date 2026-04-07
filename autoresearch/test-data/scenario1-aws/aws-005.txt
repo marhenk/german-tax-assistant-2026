@@ -1,0 +1,25 @@
+Netlify
+2325 3rd Street, Suite 296
+San Francisco, CA 94107
+
+Invoice: NTL-2024-04-7890
+Date: April 1, 2024
+
+Pro Plan (Monthly)
+Site: lexoffice-steuer.netlify.app
+
+Features:
+  - Unlimited bandwidth
+  - Custom domains
+  - SSL certificates
+  - Continuous deployment
+
+Monthly charge:        $20.00
+Converted (€/$1.00):   €20.00
+
+  Net amount:          €20.00
+  MwSt. 19%:           € 3.80
+  ──────────────────────────
+  Total:               €23.80
+
+Paid with PayPal (****@example.com)

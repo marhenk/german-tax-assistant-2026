@@ -1,0 +1,402 @@
+[
+  {
+    "id": "aws-001",
+    "file": "test-data/scenario1-aws/aws-001.txt",
+    "type": "clean-pdf",
+    "scenario": "AWS invoice, USD to EUR conversion",
+    "ground_truth": {
+      "date": "2024-03-15",
+      "vendor": "Amazon Web Services",
+      "amount_gross": 120.00,
+      "amount_net": 100.84,
+      "tax_rate": 19,
+      "tax_amount": 19.16,
+      "invoice_number": "INV-2024-03-1234",
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "aws-002",
+    "file": "test-data/scenario1-aws/aws-002.txt",
+    "type": "clean-pdf",
+    "scenario": "Hetzner invoice, German standard",
+    "ground_truth": {
+      "date": "2024-02-28",
+      "vendor": "Hetzner Online GmbH",
+      "amount_gross": 89.25,
+      "amount_net": 75.00,
+      "tax_rate": 19,
+      "tax_amount": 14.25,
+      "invoice_number": "H-2024-02-5678",
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "aws-003",
+    "file": "test-data/scenario1-aws/aws-003.txt",
+    "type": "clean-pdf",
+    "scenario": "DigitalOcean invoice, multi-line items",
+    "ground_truth": {
+      "date": "2024-01-10",
+      "vendor": "DigitalOcean",
+      "amount_gross": 35.70,
+      "amount_net": 30.00,
+      "tax_rate": 19,
+      "tax_amount": 5.70,
+      "invoice_number": "DO-2024-01-9012",
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "aws-004",
+    "file": "test-data/scenario1-aws/aws-004.txt",
+    "type": "clean-pdf",
+    "scenario": "GitHub subscription, annual",
+    "ground_truth": {
+      "date": "2023-12-20",
+      "vendor": "GitHub Inc.",
+      "amount_gross": 59.50,
+      "amount_net": 50.00,
+      "tax_rate": 19,
+      "tax_amount": 9.50,
+      "invoice_number": "GH-2023-12-3456",
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "aws-005",
+    "file": "test-data/scenario1-aws/aws-005.txt",
+    "type": "clean-pdf",
+    "scenario": "Netlify hosting, monthly",
+    "ground_truth": {
+      "date": "2024-04-01",
+      "vendor": "Netlify",
+      "amount_gross": 23.80,
+      "amount_net": 20.00,
+      "tax_rate": 19,
+      "tax_amount": 3.80,
+      "invoice_number": "NTL-2024-04-7890",
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "rewe-001",
+    "file": "test-data/scenario2-rewe/rewe-001.txt",
+    "type": "kassenbon",
+    "scenario": "REWE grocery receipt, clear thermal",
+    "ground_truth": {
+      "date": "2024-03-20",
+      "vendor": "REWE Markt GmbH",
+      "amount_gross": 47.32,
+      "amount_net": null,
+      "tax_rate": 19,
+      "tax_amount": null,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "rewe-002",
+    "file": "test-data/scenario2-rewe/rewe-002.txt",
+    "type": "kassenbon",
+    "scenario": "dm drugstore receipt, small font",
+    "ground_truth": {
+      "date": "2024-02-15",
+      "vendor": "dm-drogerie markt",
+      "amount_gross": 28.97,
+      "amount_net": null,
+      "tax_rate": 19,
+      "tax_amount": null,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "rewe-003",
+    "file": "test-data/scenario2-rewe/rewe-003.txt",
+    "type": "kassenbon",
+    "scenario": "EDEKA receipt, multi-column",
+    "ground_truth": {
+      "date": "2024-01-08",
+      "vendor": "EDEKA",
+      "amount_gross": 63.14,
+      "amount_net": null,
+      "tax_rate": 19,
+      "tax_amount": null,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "rewe-004",
+    "file": "test-data/scenario2-rewe/rewe-004.txt",
+    "type": "kassenbon",
+    "scenario": "Rossmann receipt, slightly faded",
+    "ground_truth": {
+      "date": "2023-12-12",
+      "vendor": "Rossmann",
+      "amount_gross": 19.48,
+      "amount_net": null,
+      "tax_rate": 19,
+      "tax_amount": null,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "rewe-005",
+    "file": "test-data/scenario2-rewe/rewe-005.txt",
+    "type": "kassenbon",
+    "scenario": "Aldi receipt, minimal branding",
+    "ground_truth": {
+      "date": "2024-04-05",
+      "vendor": "ALDI",
+      "amount_gross": 34.56,
+      "amount_net": null,
+      "tax_rate": 19,
+      "tax_amount": null,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "handwritten-001",
+    "file": "test-data/scenario3-handwritten/handwritten-001.txt",
+    "type": "quittung",
+    "scenario": "Taxi receipt, script handwriting",
+    "ground_truth": {
+      "date": "2024-03-10",
+      "vendor": "Taxi",
+      "amount_gross": 22.50,
+      "amount_net": 18.91,
+      "tax_rate": 19,
+      "tax_amount": 3.59,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "handwritten-002",
+    "file": "test-data/scenario3-handwritten/handwritten-002.txt",
+    "type": "quittung",
+    "scenario": "Parking fee, block letters",
+    "ground_truth": {
+      "date": "2024-02-20",
+      "vendor": "Parkhaus City",
+      "amount_gross": 8.00,
+      "amount_net": 6.72,
+      "tax_rate": 19,
+      "tax_amount": 1.28,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "handwritten-003",
+    "file": "test-data/scenario3-handwritten/handwritten-003.txt",
+    "type": "quittung",
+    "scenario": "Cash payment confirmation, mixed script",
+    "ground_truth": {
+      "date": "2024-01-15",
+      "vendor": "Müller",
+      "amount_gross": 150.00,
+      "amount_net": 126.05,
+      "tax_rate": 19,
+      "tax_amount": 23.95,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "handwritten-004",
+    "file": "test-data/scenario3-handwritten/handwritten-004.txt",
+    "type": "quittung",
+    "scenario": "Service receipt, partially printed",
+    "ground_truth": {
+      "date": "2023-12-05",
+      "vendor": "Elektro Schmidt",
+      "amount_gross": 95.20,
+      "amount_net": 80.00,
+      "tax_rate": 19,
+      "tax_amount": 15.20,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "handwritten-005",
+    "file": "test-data/scenario3-handwritten/handwritten-005.txt",
+    "type": "quittung",
+    "scenario": "Donation receipt, handwritten amount",
+    "ground_truth": {
+      "date": "2024-03-25",
+      "vendor": "Charity e.V.",
+      "amount_gross": 50.00,
+      "amount_net": 50.00,
+      "tax_rate": 0,
+      "tax_amount": 0.00,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "bank-001",
+    "file": "test-data/scenario4-bank/bank-001.csv",
+    "type": "bank-statement",
+    "scenario": "Sparkasse export, SEPA format",
+    "ground_truth": {
+      "date": "2024-03-12",
+      "vendor": "Amazon EU S.a.r.L",
+      "amount_gross": 89.99,
+      "amount_net": null,
+      "tax_rate": null,
+      "tax_amount": null,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "bank-002",
+    "file": "test-data/scenario4-bank/bank-002.csv",
+    "type": "bank-statement",
+    "scenario": "N26 export, modern CSV",
+    "ground_truth": {
+      "date": "2024-02-08",
+      "vendor": "Google Ireland Limited",
+      "amount_gross": 14.99,
+      "amount_net": null,
+      "tax_rate": null,
+      "tax_amount": null,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "bank-003",
+    "file": "test-data/scenario4-bank/bank-003.csv",
+    "type": "bank-statement",
+    "scenario": "DKB export, standard format",
+    "ground_truth": {
+      "date": "2024-01-20",
+      "vendor": "Vodafone GmbH",
+      "amount_gross": 39.99,
+      "amount_net": null,
+      "tax_rate": null,
+      "tax_amount": null,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "bank-004",
+    "file": "test-data/scenario4-bank/bank-004.csv",
+    "type": "bank-statement",
+    "scenario": "Volksbank export, classic layout",
+    "ground_truth": {
+      "date": "2023-12-15",
+      "vendor": "Telekom Deutschland GmbH",
+      "amount_gross": 49.95,
+      "amount_net": null,
+      "tax_rate": null,
+      "tax_amount": null,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "bank-005",
+    "file": "test-data/scenario4-bank/bank-005.csv",
+    "type": "bank-statement",
+    "scenario": "Commerzbank export, business account",
+    "ground_truth": {
+      "date": "2024-04-02",
+      "vendor": "Microsoft Ireland Operations Limited",
+      "amount_gross": 69.00,
+      "amount_net": null,
+      "tax_rate": null,
+      "tax_amount": null,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "faded-001",
+    "file": "test-data/scenario5-faded/faded-001.txt",
+    "type": "low-quality",
+    "scenario": "Faded thermal receipt, 6+ months old",
+    "ground_truth": {
+      "date": "2023-10-10",
+      "vendor": "Penny",
+      "amount_gross": 18.27,
+      "amount_net": null,
+      "tax_rate": 19,
+      "tax_amount": null,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "faded-002",
+    "file": "test-data/scenario5-faded/faded-002.txt",
+    "type": "low-quality",
+    "scenario": "Blurry photo, motion blur",
+    "ground_truth": {
+      "date": "2024-03-05",
+      "vendor": "Tankstelle",
+      "amount_gross": 65.80,
+      "amount_net": 55.29,
+      "tax_rate": 19,
+      "tax_amount": 10.51,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "faded-003",
+    "file": "test-data/scenario5-faded/faded-003.txt",
+    "type": "low-quality",
+    "scenario": "Low-resolution scan, 72 DPI",
+    "ground_truth": {
+      "date": "2024-01-25",
+      "vendor": "Apotheke",
+      "amount_gross": 12.45,
+      "amount_net": 10.46,
+      "tax_rate": 19,
+      "tax_amount": 1.99,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "faded-004",
+    "file": "test-data/scenario5-faded/faded-004.txt",
+    "type": "low-quality",
+    "scenario": "Skewed document, 15° rotation",
+    "ground_truth": {
+      "date": "2023-11-18",
+      "vendor": "Baumarkt",
+      "amount_gross": 127.60,
+      "amount_net": 107.23,
+      "tax_rate": 19,
+      "tax_amount": 20.37,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "faded-005",
+    "file": "test-data/scenario5-faded/faded-005.txt",
+    "type": "low-quality",
+    "scenario": "Dark/underexposed photo",
+    "ground_truth": {
+      "date": "2024-02-28",
+      "vendor": "Restaurant",
+      "amount_gross": 42.50,
+      "amount_net": 35.71,
+      "tax_rate": 19,
+      "tax_amount": 6.79,
+      "invoice_number": null,
+      "currency": "EUR"
+    }
+  }
+]

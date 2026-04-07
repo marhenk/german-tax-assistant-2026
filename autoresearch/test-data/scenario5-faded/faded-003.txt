@@ -1,0 +1,17 @@
+Apotheke am Markt
+Marktgasse 8, 3011 Bern
+
+Medikament A     €7.50
+Vitamintabletten €2.95
+Pflaster         €2.00
+                 ─────
+Gesamt          €12.45
+  Netto         €10.46
+  MwSt. 19%     € 1.99
+
+Rezept-Nr: RX-2024-0125
+
+Kasse           €12.45
+
+25.01.2024  15:20
+Beleg: A-20240125-1520

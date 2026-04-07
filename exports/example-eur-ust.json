@@ -1,0 +1,41 @@
+{
+  "year": 2025,
+  "period": "Q1",
+  "eur": {
+    "einnahmen": {
+      "total": 15000.00,
+      "categories": {
+        "betriebseinnahmen": 15000.00
+      }
+    },
+    "ausgaben": {
+      "total": 4500.00,
+      "categories": {
+        "buerokosten": 1200.00,
+        "fahrtkosten": 800.00,
+        "telekommunikation": 150.00,
+        "versicherungen": 450.00,
+        "fortbildung": 300.00,
+        "sonstige_kosten": 1600.00
+      }
+    },
+    "gewinn": 10500.00
+  },
+  "ust": {
+    "ausgangsumsatz": {
+      "19_prozent": 12605.04,
+      "7_prozent": 0.00,
+      "0_prozent": 2394.96
+    },
+    "vorsteuer": {
+      "19_prozent": 719.33,
+      "7_prozent": 0.00
+    },
+    "zahllast": 1675.63
+  },
+  "metadata": {
+    "generated": "2025-04-07T10:30:00.000Z",
+    "source": "German Tax Assistant 2026",
+    "format": "lexoffice-compatible"
+  }
+}

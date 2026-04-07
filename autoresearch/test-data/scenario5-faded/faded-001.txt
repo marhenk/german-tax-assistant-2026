@@ -1,0 +1,25 @@
+    Penny
+Länggassstr. 50, 3012 Bern
+
+Brot             €1.09
+Butter           €1.79
+Milch            €0.95
+Eier             €1.89
+Käse             €2.49
+Wurst            €2.19
+Joghurt          €1.29
+Müsli            €1.99
+Saft             €1.39
+Nudeln           €0.89
+Soße             €0.79
+Chips            €0.99
+Schokolade       €0.79
+                 ─────
+Total           €18.27
+  MwSt 19%       €2.92
+
+Bar             €20.00
+Rückgeld        € 1.73
+
+10.10.2023  12:35  K-4
+Bon: 2023101012354

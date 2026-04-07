@@ -1,0 +1,26 @@
+╔════════════════════════════╗
+║  Elektro Schmidt GmbH      ║
+║  Musterstr. 45, 3000 Bern  ║
+║  Tel: 031-999-8877         ║
+╚════════════════════════════╝
+
+Quittung
+
+Auftrag: Lampeninstallation
+
+Datum: 05.12.2023
+Kunde: M. Henkel
+
+Leistungen:
+  Material:         40,00 EUR
+  Arbeitszeit 2h:   40,00 EUR
+  ──────────────────────────
+  Netto:            80,00 EUR
+  MwSt. 19%:        15,20 EUR
+  ══════════════════════════
+  Brutto:           95,20 EUR
+
+Zahlung: Bar
+
+Mit freundlichen Grüßen
+[Handwritten signature]

@@ -1,0 +1,24 @@
+DigitalOcean LLC
+101 Avenue of the Americas
+New York, NY 10013
+
+Invoice: DO-2024-01-9012
+Date: January 10, 2024
+Customer: marcel.henkel@example.com
+
+SERVICES:
+─────────────────────────────────────────────
+Droplet (2 GB RAM, 1 vCPU)     $12.00
+Block Storage (50 GB)          $ 5.00
+Load Balancer                  $10.00
+Snapshots                      $ 3.00
+─────────────────────────────────────────────
+Subtotal USD:                  $30.00
+
+Converted to EUR (1.19):       €25.21
+  Net:                         €25.21
+  VAT 19%:                     € 4.79
+  ─────────────────────────────────
+  Gross Total:                 €30.00
+
+Payment method: Credit Card ****1234

@@ -1,0 +1,42 @@
+{
+  "name": "german-tax-assistant-2026",
+  "version": "1.0.0",
+  "description": "Automated German tax management for self-employed individuals",
+  "main": "src/index.js",
+  "bin": {
+    "tax": "./cli.js"
+  },
+  "scripts": {
+    "test": "node test/run-tests.js",
+    "autoresearch": "node autoresearch/run-autoresearch.js",
+    "dashboard": "node -e \"require('http').createServer((req,res)=>{require('fs').readFile('./web/index.html',(e,d)=>res.end(d))}).listen(8080,()=>console.log('http://localhost:8080'))\"",
+    "ocr": "node cli.js ocr-scan",
+    "parse": "node cli.js bank-parse",
+    "calculate": "node cli.js eur-calculate"
+  },
+  "keywords": [
+    "german-tax",
+    "eur",
+    "umsatzsteuer",
+    "ocr",
+    "receipts",
+    "tax-automation",
+    "self-employed",
+    "kleinunternehmer"
+  ],
+  "author": "Marcel Henkel <mhenkelm649@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "googleapis": "^140.0.0",
+    "tesseract.js": "^5.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marhenk/german-tax-assistant-2026.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marhenk/german-tax-assistant-2026/issues"
+  },
+  "homepage": "https://github.com/marhenk/german-tax-assistant-2026#readme"
+}

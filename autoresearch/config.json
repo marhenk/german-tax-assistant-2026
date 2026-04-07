@@ -1,0 +1,82 @@
+{
+  "target_skill": "lexoffice-steuer/ocr-processor.js",
+  "wiki_domain": "wikis/tax/wiki/ocr/",
+  "test_cases": "lexoffice-steuer/ocr-autoresearch/test-cases.md",
+  "evals": "lexoffice-steuer/ocr-autoresearch/evals.md",
+  "runs_per_experiment": 5,
+  "interval_minutes": 2,
+  "budget_cap": 15,
+  "mutation_strategy": "targeted",
+  
+  "focus_areas": [
+    "Preprocessing (contrast, deskew, denoise)",
+    "Date parsing (DD.MM.YYYY, YYYY-MM-DD formats)",
+    "Amount extraction (netto/brutto split)",
+    "Tax rate detection (19%/7%/0%)",
+    "Vendor normalization (fuzzy matching)",
+    "Confidence calibration"
+  ],
+  
+  "baseline": {
+    "expected_score": "110/150 (73%)",
+    "known_weaknesses": [
+      "Faded thermal receipts (low contrast)",
+      "Handwritten vendor names",
+      "Tax rate detection on mixed-rate receipts",
+      "Confidence overestimation on poor OCR"
+    ]
+  },
+  
+  "target": {
+    "score": "142/150 (95%)",
+    "rationale": "Match fitness-screenshot-analysis accuracy"
+  },
+  
+  "mutation_prompts": [
+    "Add aggressive contrast boost for thermal receipts (linear transform)",
+    "Implement adaptive thresholding for low-quality images",
+    "Add deskew using Hough line detection",
+    "Improve date regex patterns (add abbreviated months)",
+    "Better amount fallback (find largest number heuristic)",
+    "Tax rate keyword matching (MwSt 19%, USt 7%)",
+    "Vendor fuzzy matching (Levenshtein distance ≤3)",
+    "Confidence scoring based on field extraction success rate",
+    "Multi-pass OCR (try 3 preprocessing variants, pick best)",
+    "Add median filter for denoising before sharpening",
+    "Implement CLAHE (adaptive histogram equalization)",
+    "Better invoice number pattern matching (RE-, INV-)",
+    "Currency detection and conversion (USD, CHF → EUR)",
+    "Bank statement CSV parsing (skip OCR)",
+    "Quittung handwriting detection (switch to Google Vision API fallback)"
+  ],
+  
+  "eval_weights": {
+    "date_extraction": 1.5,
+    "amount_gross": 2.0,
+    "amount_net": 1.0,
+    "vendor_identification": 1.5,
+    "tax_rate_detection": 1.0,
+    "confidence_calibration": 1.0
+  },
+  
+  "output": {
+    "dashboard": "lexoffice-steuer/ocr-autoresearch/dashboard.html",
+    "final_report": "lexoffice-steuer/ocr-autoresearch/FINAL_REPORT.md",
+    "changelog": "lexoffice-steuer/ocr-autoresearch/CHANGELOG.md",
+    "best_model": "lexoffice-steuer/ocr-processor-optimized.js"
+  },
+  
+  "monitoring": {
+    "live_updates": true,
+    "auto_refresh_seconds": 10,
+    "slack_webhook": null,
+    "telegram_chat_id": null
+  },
+  
+  "safety": {
+    "max_runtime_hours": 4,
+    "checkpoint_every_n_runs": 3,
+    "rollback_on_regression": true,
+    "human_review_threshold": 0.90
+  }
+}

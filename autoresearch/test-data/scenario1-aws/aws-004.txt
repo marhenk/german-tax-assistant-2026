@@ -1,0 +1,24 @@
+GitHub, Inc.
+88 Colin P Kelly Jr St
+San Francisco, CA 94107
+
+Receipt: GH-2023-12-3456
+Date: December 20, 2023
+
+GitHub Team Subscription (Annual)
+marcel-henkel organization
+
+Plan: Team
+Users: 5
+Billing Period: Dec 2023 - Dec 2024
+
+Amount: $50.00 USD
+Converted EUR: €50.00
+  
+  Netto:      €50.00
+  USt 19%:    € 9.50
+  ─────────────────
+  Brutto:     €59.50
+
+Payment: Visa ****5678
+Next billing: December 20, 2024

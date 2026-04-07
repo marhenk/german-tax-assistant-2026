@@ -1,0 +1,24 @@
+{
+  "googleDrive": {
+    "unsortedFolder": "Belege Unsortiert",
+    "sortedFolder": "Steuern",
+    "oauthCredentials": "*** REPLACE WITH YOUR CREDENTIALS ***"
+  },
+  "lexoffice": {
+    "apiKey": "*** REPLACE WITH YOUR API KEY ***",
+    "readOnly": true
+  },
+  "ocr": {
+    "language": "deu",
+    "minConfidence": 0.6
+  },
+  "bankParser": {
+    "fuzzyMatchTolerance": {
+      "days": 3,
+      "amountPercent": 5
+    }
+  },
+  "classification": {
+    "defaultPrivateBusinessRatio": 0.8
+  }
+}

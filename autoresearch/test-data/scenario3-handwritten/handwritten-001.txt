@@ -1,0 +1,17 @@
+        Quittung
+
+Datum: 10.03.2024
+
+Taxi-Fahrt
+Von: Bern Bahnhof
+Nach: Bümplizstr. 123
+
+Betrag: 22,50 EUR
+
+  Netto:  18,91 EUR
+  MwSt 19%: 3,59 EUR
+
+Bar bezahlt.
+
+Taxi Bern
+Tel: 031 123 45 67

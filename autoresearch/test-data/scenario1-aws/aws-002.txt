@@ -1,0 +1,29 @@
+Hetzner Online GmbH
+Industriestr. 25
+91710 Gunzenhausen
+Deutschland
+
+Rechnung Nr.: H-2024-02-5678
+Rechnungsdatum: 28.02.2024
+Kundennummer: K-123456
+
+EMPFÄNGER:
+Marcel Henkel
+Bümplizstrasse 123
+3018 Bern
+Schweiz
+
+LEISTUNGSZEITRAUM: 01.02.2024 - 28.02.2024
+
+Pos. Beschreibung                  Menge  Einzel    Gesamt
+────────────────────────────────────────────────────────────
+1    Server CX41                   1      €75.00    €75.00
+     (4 vCPU, 16 GB RAM)
+
+                                             Netto:  €75.00
+                                        MwSt. 19%:  €14.25
+                                            ──────────────
+                                           Brutto:  €89.25
+
+Zahlbar sofort ohne Abzug.
+Bankverbindung: IBAN DE12 3456 7890 1234 5678 90
