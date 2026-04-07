@@ -47,6 +47,22 @@ Der **Marktwert** der Reise ist anzusetzen:
 
 ## 3. §37b EStG: Pauschalversteuerung
 
+### 3.0 Gesetzestext (Auszug)
+
+> **§37b EStG — Pauschalierung der Einkommensteuer bei Sachzuwendungen**
+>
+> **(1)** Steuerpflichtige können die Einkommensteuer einheitlich für alle innerhalb eines Wirtschaftsjahres gewährten
+> 1. betrieblich veranlassten Zuwendungen, die zusätzlich zur ohnehin vereinbarten Leistung oder Gegenleistung erbracht werden, und
+> 2. Geschenke im Sinne des § 4 Absatz 5 Satz 1 Nummer 1,
+>
+> die nicht in Geld bestehen, mit einem **Pauschsteuersatz von 30 Prozent** erheben.
+>
+> Die Pauschalierung ist **ausgeschlossen**, soweit die Aufwendungen je Empfänger und Wirtschaftsjahr den Betrag von **10.000 Euro übersteigen**.
+>
+> **(3)** Die pauschal besteuerten Sachzuwendungen bleiben bei der Ermittlung der Einkünfte des Empfängers **außer Ansatz**. [...] Der Steuerpflichtige hat den Empfänger von der Steuerübernahme **zu unterrichten**.
+>
+> — Quelle: [gesetze-im-internet.de/estg/__37b.html](https://www.gesetze-im-internet.de/estg/__37b.html)
+
 ### 3.1 Mechanismus
 
 Das **zuwendende Unternehmen** (Young Living, doTERRA) kann die Steuer pauschal übernehmen:
@@ -63,14 +79,27 @@ Das **zuwendende Unternehmen** (Young Living, doTERRA) kann die Steuer pauschal 
 1. Zuwendung **zusätzlich** zur vereinbarten Vergütung
 2. Sachzuwendung (keine Barauszahlung)
 3. Einheitliche Ausübung für alle Zuwendungen der Kategorie
-4. **Mitteilung an Empfänger** über erfolgte Pauschalierung
+4. **Mitteilung an Empfänger** über erfolgte Pauschalierung (gesetzliche Pflicht!)
 
-### 3.3 Wirkung für den Empfänger
+### 3.3 Obergrenze: 10.000 € pro Jahr
+
+⚠️ **Wichtig:** Die Pauschalierung ist **ausgeschlossen**, wenn:
+- Aufwendungen je Empfänger und Wirtschaftsjahr > 10.000 €
+- Oder: einzelne Zuwendung > 10.000 €
+
+| Beispiel | Pauschalierung möglich? |
+|----------|-------------------------|
+| Diamond Retreat (5.000 €) | ✅ Ja |
+| Diamond + Leadership Cruise (8.000 €) | ✅ Ja |
+| 2× Diamond Retreat (10.000 €) | ✅ Ja (genau Grenze) |
+| Diamond + Platinum (12.000 €) | ❌ Nein, über Grenze |
+
+### 3.4 Wirkung für den Empfänger
 
 **Wenn §37b angewendet wird:**
-- ✅ Keine Versteuerung beim Empfänger
+- ✅ Keine Versteuerung beim Empfänger ("außer Ansatz")
 - ✅ Keine Aufnahme in die Steuererklärung nötig
-- ⚠️ MLM-Unternehmen muss dies **schriftlich bestätigen**
+- ⚠️ MLM-Unternehmen **muss** informieren (gesetzliche Pflicht)
 
 **Wenn §37b NICHT angewendet wird:**
 - ❌ Vollständige Versteuerung als Betriebseinnahme
