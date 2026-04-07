@@ -1,0 +1,87 @@
+{
+  "recurring": [
+    {
+      "pattern": [
+        "miete",
+        "rent"
+      ],
+      "category": "Raumkosten",
+      "eur_account": "4210",
+      "confidence": 0.98,
+      "note": "Monatliche Büromiete"
+    },
+    {
+      "pattern": [
+        "versicherung",
+        "insurance",
+        "allianz",
+        "ergo"
+      ],
+      "category": "Versicherung",
+      "eur_account": "4360",
+      "confidence": 0.95,
+      "note": "Versicherungsbeitrag"
+    },
+    {
+      "pattern": [
+        "kontoführung",
+        "kontogebühr",
+        "account fee"
+      ],
+      "category": "Bankgebühren",
+      "eur_account": "4910",
+      "confidence": 0.99,
+      "note": "Kontoführungsgebühren"
+    },
+    {
+      "pattern": [
+        "stromkosten",
+        "strom",
+        "electricity",
+        "stadtwerke"
+      ],
+      "category": "Nebenkosten",
+      "eur_account": "4240",
+      "confidence": 0.95,
+      "note": "Stromrechnung"
+    },
+    {
+      "pattern": [
+        "internet",
+        "telekom",
+        "vodafone",
+        "1&1"
+      ],
+      "category": "Telekommunikation",
+      "eur_account": "4910",
+      "confidence": 0.95,
+      "note": "Internet/Telefon"
+    }
+  ],
+  "one_time": [
+    {
+      "pattern": [
+        "finanzamt",
+        "tax office",
+        "umsatzsteuer",
+        "gewerbesteuer"
+      ],
+      "category": "Steuern",
+      "eur_account": "1780",
+      "confidence": 0.99,
+      "note": "Steuerzahlung"
+    },
+    {
+      "pattern": [
+        "krankenkasse",
+        "health insurance",
+        "tk ",
+        "aok"
+      ],
+      "category": "Versicherung",
+      "eur_account": "4360",
+      "confidence": 0.95,
+      "note": "Krankenversicherung"
+    }
+  ]
+}

@@ -25,6 +25,7 @@ const { execSync } = require('child_process');
 const { applyCategoryRules, enhanceCategorization } = require('./rule-based-categorization.js');
 const { processMLMTransaction, detectReverseCharge } = require('./mlm-tax-handler.js');
 const { logCorrection, getStats } = require('./active-learning.js');
+const { canCategorizeWithoutReceipt } = require('./no-receipt-categorization.js');
 
 // Config
 const CONFIG = {
@@ -85,6 +86,27 @@ async function processReceipt(imagePath) {
   console.log(`   Vendor: ${transaction.vendor || 'Unknown'}`);
   console.log(`   Amount: ${transaction.amount || 'Unknown'}`);
   console.log(`   Date: ${transaction.date || 'Unknown'}`);
+  
+  // Step 3.5: Check if we can skip receipt (no-receipt categorization)
+  const noReceiptCheck = canCategorizeWithoutReceipt(transaction);
+  if (noReceiptCheck.can_skip_receipt) {
+    console.log('\n✅ Can skip receipt!');
+    console.log(`   Reason: ${noReceiptCheck.reason}`);
+    console.log(`   Category: ${noReceiptCheck.category}`);
+    result.category = noReceiptCheck.category;
+    result.confidence = noReceiptCheck.confidence;
+    result.source = 'no-receipt-rule';
+    result.eur_account = noReceiptCheck.eur_account;
+    result.receipt_required = false;
+    
+    // Log and finish
+    fs.appendFileSync(CONFIG.processed_log, JSON.stringify(result) + '\n');
+    console.log('\n━'.repeat(60));
+    console.log('✅ Processing complete (no receipt needed)!\n');
+    return result;
+  }
+  
+  result.receipt_required = true;
   
   // Step 4: Hybrid Categorization (Rules → Gemma Fallback)
   console.log('\n4️⃣  Categorizing...');
