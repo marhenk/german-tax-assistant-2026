@@ -16,6 +16,8 @@ Production-ready German tax automation for Kleinunternehmer and self-employed in
 │                    GERMAN TAX ASSISTANT                         │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
+│  🔌 Lexware Office Sync (API) ──→ Download vouchers + receipts │
+│       ↓                                                         │
 │  📄 OCR Receipt (Tesseract + Pre-processing)                   │
 │       ↓                                                         │
 │  🔢 Generate Receipt Number (YYYY-MM-NNNNN)                    │
@@ -44,6 +46,10 @@ Production-ready German tax automation for Kleinunternehmer and self-employed in
 ```bash
 # Install
 npm install
+
+# Set up Lexware API (optional)
+node lexware-connector.js auth YOUR_API_KEY
+node lexware-connector.js sync
 
 # Run full pipeline on a receipt
 node integrate.js receipt.jpg
@@ -141,7 +147,49 @@ node receipt-tracking.js dashboard --verbose
 # ⚠️  Überfällig:    0 (0.00 EUR)
 ```
 
-### 5. MLM Tax Handler (Young Living)
+### 5. Lexware Office API Connector
+
+Sync bookkeeping vouchers from Lexware Office.
+
+```bash
+# Set up API key
+node lexware-connector.js auth YOUR_API_KEY
+
+# Full sync (all vouchers)
+node lexware-connector.js sync
+
+# Incremental sync (since date)
+node lexware-connector.js sync --since 2024-01-01
+
+# List vouchers
+node lexware-connector.js list
+
+# Download single voucher
+node lexware-connector.js download <voucher-id>
+```
+
+**Features:**
+- ✅ Auto-download vouchers + receipts
+- ✅ Rate limiting (2 req/s, token bucket)
+- ✅ Incremental sync (track last sync date)
+- ✅ Auto-register in receipt-tracking.js
+- ✅ Files organized by YYYY-MM folders
+- ✅ Exponential backoff on 429
+
+**File structure:**
+```
+lexware-sync/
+├── 2024-03/
+│   ├── RE-001.json          # Voucher metadata
+│   ├── RE-001.pdf           # Attached receipt
+│   ├── RE-002.json
+│   └── RE-002.pdf
+└── metadata.json            # Sync tracking
+```
+
+📚 **[Full Documentation](LEXWARE-CONNECTOR.md)**
+
+### 6. MLM Tax Handler (Young Living)
 
 Special handling for MLM transactions.
 
