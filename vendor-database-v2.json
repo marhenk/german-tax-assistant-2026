@@ -1,0 +1,334 @@
+{
+  "REWE": {
+    "category": "Lebensmittel",
+    "eur_account": "4930",
+    "keywords": ["rewe", "rewe group", "rewe markt"],
+    "vat_rate": 7,
+    "notes": "Reduced VAT for groceries"
+  },
+  "EDEKA": {
+    "category": "Lebensmittel",
+    "eur_account": "4930",
+    "keywords": ["edeka"],
+    "vat_rate": 7,
+    "notes": "Reduced VAT"
+  },
+  "ALDI": {
+    "category": "Lebensmittel",
+    "eur_account": "4930",
+    "keywords": ["aldi", "aldi sud", "aldi nord"],
+    "vat_rate": 7
+  },
+  "LIDL": {
+    "category": "Lebensmittel",
+    "eur_account": "4930",
+    "keywords": ["lidl"],
+    "vat_rate": 7
+  },
+  "dm": {
+    "category": "Drogerie",
+    "eur_account": "4930",
+    "keywords": ["dm", "dm-drogerie", "drogerie markt"],
+    "vat_rate": 19
+  },
+  "ROSSMANN": {
+    "category": "Drogerie",
+    "eur_account": "4930",
+    "keywords": ["rossmann", "dirk rossmann"],
+    "vat_rate": 19
+  },
+  "Deutsche Bahn": {
+    "category": "Reisekosten",
+    "eur_account": "4670",
+    "keywords": ["deutsche bahn", "db", "db vertrieb", "bahn.de"],
+    "vat_rate": 19
+  },
+  "Lufthansa": {
+    "category": "Reisekosten",
+    "eur_account": "4671",
+    "keywords": ["lufthansa", "lh"],
+    "vat_rate": 19
+  },
+  "Shell": {
+    "category": "KFZ",
+    "eur_account": "4650",
+    "keywords": ["shell", "shell tankstelle"],
+    "vat_rate": 19
+  },
+  "Aral": {
+    "category": "KFZ",
+    "eur_account": "4650",
+    "keywords": ["aral"],
+    "vat_rate": 19
+  },
+  "Amazon": {
+    "category": "Büromaterial",
+    "eur_account": "4940",
+    "keywords": ["amazon", "amzn", "amazon.de"],
+    "vat_rate": 19,
+    "notes": "Mixed - check invoice for category"
+  },
+  "Microsoft": {
+    "category": "Software",
+    "eur_account": "4935",
+    "keywords": ["microsoft", "msft", "office 365", "azure"],
+    "vat_rate": 19
+  },
+  "Google": {
+    "category": "Software",
+    "eur_account": "4935",
+    "keywords": ["google", "google workspace", "google cloud", "google ads"],
+    "vat_rate": 19,
+    "notes": "Ads = Marketing (4945)"
+  },
+  "Telekom": {
+    "category": "Telekommunikation",
+    "eur_account": "4920",
+    "keywords": ["telekom", "deutsche telekom", "t-mobile"],
+    "vat_rate": 19
+  },
+  "Vodafone": {
+    "category": "Telekommunikation",
+    "eur_account": "4920",
+    "keywords": ["vodafone"],
+    "vat_rate": 19
+  },
+  "Young Living Europe": {
+    "category": "Wareneinkauf (MLM)",
+    "eur_account": "4930",
+    "keywords": ["young living", "yl", "youngliving", "essential oils"],
+    "vat_rate": 0,
+    "notes": "UK supplier - Reverse Charge §13b! Check for Eigenverbrauch!"
+  },
+  "Booking.com": {
+    "category": "Reisekosten",
+    "eur_account": "4671",
+    "keywords": ["booking", "booking.com"],
+    "vat_rate": 19
+  },
+  "Airbnb": {
+    "category": "Reisekosten",
+    "eur_account": "4671",
+    "keywords": ["airbnb"],
+    "vat_rate": 19
+  },
+  "DHL": {
+    "category": "Porto/Versand",
+    "eur_account": "4910",
+    "keywords": ["dhl", "deutsche post"],
+    "vat_rate": 19
+  },
+  "Hermes": {
+    "category": "Porto/Versand",
+    "eur_account": "4910",
+    "keywords": ["hermes"],
+    "vat_rate": 19
+  },
+  "FlixBus": {
+    "category": "Reisekosten",
+    "eur_account": "4670",
+    "keywords": ["flixbus", "flix"],
+    "vat_rate": 19
+  },
+  "McDonald's": {
+    "category": "Verpflegung",
+    "eur_account": "4650",
+    "keywords": ["mcdonald", "mcdonalds", "mcd"],
+    "vat_rate": 19,
+    "notes": "Tax deductible only during business travel"
+  },
+  "Subway": {
+    "category": "Verpflegung",
+    "eur_account": "4650",
+    "keywords": ["subway"],
+    "vat_rate": 19
+  },
+  "Lieferando": {
+    "category": "Verpflegung",
+    "eur_account": "4650",
+    "keywords": ["lieferando", "lieferheld"],
+    "vat_rate": 19
+  },
+  "Udemy": {
+    "category": "Weiterbildung",
+    "eur_account": "4945",
+    "keywords": ["udemy"],
+    "vat_rate": 19
+  },
+  "LinkedIn": {
+    "category": "Marketing",
+    "eur_account": "4945",
+    "keywords": ["linkedin", "linkedin ads", "linkedin learning"],
+    "vat_rate": 19
+  },
+  "Allianz": {
+    "category": "Versicherung",
+    "eur_account": "4360",
+    "keywords": ["allianz"],
+    "vat_rate": 0,
+    "notes": "Insurance exempt from VAT"
+  },
+  "HUK-COBURG": {
+    "category": "Versicherung",
+    "eur_account": "4360",
+    "keywords": ["huk", "huk-coburg"],
+    "vat_rate": 0
+  },
+  "Fiverr": {
+    "category": "Marketing",
+    "eur_account": "4945",
+    "keywords": ["fiverr"],
+    "vat_rate": 19
+  },
+  "Upwork": {
+    "category": "Marketing",
+    "eur_account": "4945",
+    "keywords": ["upwork"],
+    "vat_rate": 19
+  },
+  "Vistaprint": {
+    "category": "Marketing",
+    "eur_account": "4945",
+    "keywords": ["vistaprint"],
+    "vat_rate": 19
+  },
+  "Flyeralarm": {
+    "category": "Marketing",
+    "eur_account": "4945",
+    "keywords": ["flyeralarm"],
+    "vat_rate": 19
+  },
+  "OBI": {
+    "category": "Werkzeug",
+    "eur_account": "4940",
+    "keywords": ["obi"],
+    "vat_rate": 19
+  },
+  "Bauhaus": {
+    "category": "Werkzeug",
+    "eur_account": "4940",
+    "keywords": ["bauhaus"],
+    "vat_rate": 19
+  },
+  "Thalia": {
+    "category": "Fachliteratur",
+    "eur_account": "4945",
+    "keywords": ["thalia"],
+    "vat_rate": 7,
+    "notes": "Books = reduced VAT"
+  },
+  "Hugendubel": {
+    "category": "Fachliteratur",
+    "eur_account": "4945",
+    "keywords": ["hugendubel"],
+    "vat_rate": 7
+  },
+  "PENNY": {
+    "category": "Lebensmittel",
+    "eur_account": "4930",
+    "keywords": ["penny"],
+    "vat_rate": 7
+  },
+  "NETTO": {
+    "category": "Lebensmittel",
+    "eur_account": "4930",
+    "keywords": ["netto"],
+    "vat_rate": 7
+  },
+  "Kaufland": {
+    "category": "Lebensmittel",
+    "eur_account": "4930",
+    "keywords": ["kaufland"],
+    "vat_rate": 7
+  },
+  "Douglas": {
+    "category": "Drogerie",
+    "eur_account": "4930",
+    "keywords": ["douglas"],
+    "vat_rate": 19
+  },
+  "Müller": {
+    "category": "Drogerie",
+    "eur_account": "4930",
+    "keywords": ["mueller", "müller"],
+    "vat_rate": 19
+  },
+  "Esso": {
+    "category": "KFZ",
+    "eur_account": "4650",
+    "keywords": ["esso"],
+    "vat_rate": 19
+  },
+  "Total": {
+    "category": "KFZ",
+    "eur_account": "4650",
+    "keywords": ["total", "totalenergies"],
+    "vat_rate": 19
+  },
+  "Sixt": {
+    "category": "Reisekosten",
+    "eur_account": "4670",
+    "keywords": ["sixt"],
+    "vat_rate": 19
+  },
+  "Europcar": {
+    "category": "Reisekosten",
+    "eur_account": "4670",
+    "keywords": ["europcar"],
+    "vat_rate": 19
+  },
+  "O2": {
+    "category": "Telekommunikation",
+    "eur_account": "4920",
+    "keywords": ["o2", "telefonica"],
+    "vat_rate": 19
+  },
+  "1&1": {
+    "category": "Telekommunikation",
+    "eur_account": "4920",
+    "keywords": ["1&1", "1und1"],
+    "vat_rate": 19
+  },
+  "Adobe": {
+    "category": "Software",
+    "eur_account": "4935",
+    "keywords": ["adobe", "creative cloud"],
+    "vat_rate": 19
+  },
+  "Salesforce": {
+    "category": "Software",
+    "eur_account": "4935",
+    "keywords": ["salesforce"],
+    "vat_rate": 19
+  },
+  "Zoom": {
+    "category": "Software",
+    "eur_account": "4935",
+    "keywords": ["zoom"],
+    "vat_rate": 19
+  },
+  "Slack": {
+    "category": "Software",
+    "eur_account": "4935",
+    "keywords": ["slack"],
+    "vat_rate": 19
+  },
+  "GitHub": {
+    "category": "Software",
+    "eur_account": "4935",
+    "keywords": ["github"],
+    "vat_rate": 19
+  },
+  "Notion": {
+    "category": "Software",
+    "eur_account": "4935",
+    "keywords": ["notion"],
+    "vat_rate": 19
+  },
+  "Asana": {
+    "category": "Software",
+    "eur_account": "4935",
+    "keywords": ["asana"],
+    "vat_rate": 19
+  }
+}
