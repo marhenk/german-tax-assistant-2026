@@ -1,0 +1,52 @@
+{
+  "learned": [
+    {
+      "id": 1775582952232,
+      "description_pattern": "miete büro",
+      "amount_pattern": 500,
+      "amount_tolerance": 0.05,
+      "category": "Raumkosten",
+      "eur_account": "4210",
+      "frequency": "monthly",
+      "confidence": 0.85,
+      "auto_approve": true,
+      "active": true,
+      "created": "2026-04-07T17:29:12.232Z",
+      "last_seen": "2026-04-07T17:29:12.233Z",
+      "occurrences": 1,
+      "note": ""
+    },
+    {
+      "id": 1775582952234,
+      "description_pattern": "allianz versicherung",
+      "amount_pattern": 89,
+      "amount_tolerance": 0.05,
+      "category": "Versicherung",
+      "eur_account": "4360",
+      "frequency": "monthly",
+      "confidence": 0.85,
+      "auto_approve": true,
+      "active": true,
+      "created": "2026-04-07T17:29:12.234Z",
+      "last_seen": "2026-04-07T17:29:12.234Z",
+      "occurrences": 1,
+      "note": ""
+    },
+    {
+      "id": 1775582952244,
+      "description_pattern": "telekom rechnung",
+      "amount_pattern": 39.99,
+      "amount_tolerance": 0.05,
+      "category": "Telekommunikation",
+      "eur_account": "4910",
+      "frequency": "monthly",
+      "confidence": 0.85,
+      "auto_approve": true,
+      "active": true,
+      "created": "2026-04-07T17:29:12.244Z",
+      "last_seen": "2026-04-07T17:29:12.244Z",
+      "occurrences": 1,
+      "note": ""
+    }
+  ]
+}
