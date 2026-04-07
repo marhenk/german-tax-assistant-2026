@@ -1,0 +1,140 @@
+{
+  "testSuite": "Incentive-Reisen Kategorisierung",
+  "version": "1.0.0",
+  "created": "2026-04-07",
+  "description": "Test cases für MLM Incentive-Reisen Erkennung",
+  "testCases": [
+    {
+      "id": "INC-001",
+      "description": "Young Living Diamond Retreat",
+      "input": "YL INCENTIVE DIAMOND RETREAT CARIBBEAN",
+      "expectedCategory": "Sachbezüge (Incentive-Reisen)",
+      "expectedAccount": "8400",
+      "expectedConfidence": 0.98,
+      "notes": "Klarer Incentive-Reise Fall mit YL-spezifischem Keyword"
+    },
+    {
+      "id": "INC-002",
+      "description": "Leadership Cruise generisch",
+      "input": "LEADERSHIP CRUISE MEDITERRANEAN 2026",
+      "expectedCategory": "Sachbezüge (Incentive-Reisen)",
+      "expectedAccount": "8400",
+      "expectedConfidence": 0.98,
+      "notes": "Leadership Cruise Pattern"
+    },
+    {
+      "id": "INC-003",
+      "description": "Gold Retreat Buchung",
+      "input": "GOLD RETREAT WELLNESS SPA AUSTRIA",
+      "expectedCategory": "Sachbezüge (Incentive-Reisen)",
+      "expectedAccount": "8400",
+      "expectedConfidence": 0.98,
+      "notes": "Rang-basiertes Retreat"
+    },
+    {
+      "id": "INC-004",
+      "description": "Convention mit Incentive-Charakter",
+      "input": "YL CONVENTION ORLANDO ALL INCLUSIVE",
+      "expectedCategory": "Sachbezüge (Incentive-Reisen)",
+      "expectedAccount": "8400",
+      "expectedConfidence": 0.98,
+      "notes": "Convention = oft Incentive wenn kostenlos"
+    },
+    {
+      "id": "INC-005",
+      "description": "Diamond Trip Kreuzfahrt",
+      "input": "DIAMOND TRIP ALASKA CRUISE ROYAL CARIBBEAN",
+      "expectedCategory": "Sachbezüge (Incentive-Reisen)",
+      "expectedAccount": "8400",
+      "expectedConfidence": 0.98,
+      "notes": "Diamond Trip + Cruise Kombination"
+    },
+    {
+      "id": "INC-006",
+      "description": "Incentive Reise generisch",
+      "input": "INCENTIVE REISE MALLORCA TEAMBUILDING",
+      "expectedCategory": "Sachbezüge (Incentive-Reisen)",
+      "expectedAccount": "8400",
+      "expectedConfidence": 0.98,
+      "notes": "Explizites 'Incentive Reise' Keyword"
+    },
+    {
+      "id": "INC-007",
+      "description": "Silver Retreat",
+      "input": "SILVER RETREAT TOSKANA YOUNG LIVING",
+      "expectedCategory": "Sachbezüge (Incentive-Reisen)",
+      "expectedAccount": "8400",
+      "expectedConfidence": 0.98,
+      "notes": "Rang-spezifisches Retreat"
+    },
+    {
+      "id": "INC-008",
+      "description": "Reward Trip",
+      "input": "REWARD TRIP DUBAI TOP PERFORMER 2026",
+      "expectedCategory": "Sachbezüge (Incentive-Reisen)",
+      "expectedAccount": "8400",
+      "expectedConfidence": 0.98,
+      "notes": "Reward Trip = Incentive-Reise (enthält 'trip')"
+    },
+    {
+      "id": "INC-009",
+      "description": "Platinum Recognition Trip",
+      "input": "PLATINUM RECOGNITION TRIP HAWAII",
+      "expectedCategory": "Sachbezüge (Incentive-Reisen)",
+      "expectedAccount": "8400",
+      "expectedConfidence": 0.98,
+      "notes": "Platinum Rang + Trip"
+    },
+    {
+      "id": "INC-010",
+      "description": "doTERRA Incentive Trip",
+      "input": "DOTERRA PRESIDENTIAL DIAMOND TRIP BALI",
+      "expectedCategory": "Sachbezüge (Incentive-Reisen)",
+      "expectedAccount": "8400",
+      "expectedConfidence": 0.98,
+      "notes": "Anderer MLM-Anbieter, gleiche Struktur"
+    }
+  ],
+  "edgeCases": [
+    {
+      "id": "EDGE-001",
+      "description": "Normale Geschäftsreise vs. Incentive",
+      "input": "BOOKING.COM HOTEL BERLIN GESCHAEFTSREISE",
+      "expectedCategory": "Reisekosten",
+      "expectedAccount": "4671",
+      "notes": "KEIN Incentive - normale Reisekosten"
+    },
+    {
+      "id": "EDGE-002",
+      "description": "Schulung mit Reise",
+      "input": "PRODUKTSCHULUNG MALLORCA 3 TAGE",
+      "expectedCategory": "Weiterbildung",
+      "expectedAccount": "4945",
+      "notes": "Gemischt - könnte Aufteilung erfordern"
+    },
+    {
+      "id": "EDGE-003",
+      "description": "Cruise ohne Incentive-Kontext",
+      "input": "AIDA CRUISES FAMILIENURLAUB",
+      "expectedCategory": "Privat",
+      "expectedAccount": null,
+      "notes": "Privatreise - nicht abzugsfähig"
+    },
+    {
+      "id": "EDGE-004",
+      "description": "YL Bestellung vs. Incentive",
+      "input": "YOUNG LIVING ESSENTIAL OILS ORDER",
+      "expectedCategory": "Wareneinkauf (MLM)",
+      "expectedAccount": "4930",
+      "notes": "Produktbestellung, kein Incentive"
+    },
+    {
+      "id": "EDGE-005",
+      "description": "Team Bonus Cash vs. Reise",
+      "input": "YL TEAM BONUS AUSZAHLUNG Q1",
+      "expectedCategory": "Team-Provisionen",
+      "expectedAccount": "4601",
+      "notes": "Cash-Bonus, keine Sachzuwendung"
+    }
+  ]
+}

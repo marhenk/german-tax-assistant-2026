@@ -201,6 +201,15 @@ const CATEGORY_RULES = [
     confidence: 0.95
   },
   
+  // MLM Incentive-Reisen (BEFORE generic MLM patterns - most specific first!)
+  {
+    pattern: /kreuzfahrt|cruise|incentive.*reise|diamond.*(trip|retreat)|gold.*retreat|silver.*retreat|platinum.*(trip|retreat)|convention|leadership.*(cruise|trip|event)|retreat.*(diamond|gold|silver|platinum)|recognition.*trip|achievers.*trip|founders.*club/i,
+    category: 'Sachbezüge (Incentive-Reisen)',
+    eur_account: '8400',
+    confidence: 0.98,
+    note: 'ACHTUNG: Geldwerter Vorteil! Prüfen ob YL §37b Pauschalversteuerung anwendet. Wenn nicht: Marktwert als Einnahme versteuern!'
+  },
+  
   // MLM Income (specific patterns BEFORE generic "commission")
   {
     pattern: /team bonus|downline|ogv bonus|team.*provision/i,
@@ -209,7 +218,7 @@ const CATEGORY_RULES = [
     confidence: 0.95
   },
   {
-    pattern: /incentive|reward|yl incentive|young living.*bonus/i,
+    pattern: /(?<!retreat|trip|cruise|reise).*incentive(?!.*reise)|reward(?!.*trip)|yl incentive|young living.*bonus/i,
     category: 'Boni & Incentives',
     eur_account: '4602',
     confidence: 0.95

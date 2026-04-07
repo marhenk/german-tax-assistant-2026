@@ -552,5 +552,89 @@
     "eur_account": "4945",
     "keywords": ["linkedin learning"],
     "vat_rate": 19
+  },
+  "YL Incentive Diamond Retreat": {
+    "category": "Sachbezüge (Incentive-Reisen)",
+    "eur_account": "8400",
+    "keywords": ["diamond retreat", "yl diamond", "yl retreat diamond"],
+    "vat_rate": 0,
+    "notes": "GELDWERTER VORTEIL! Prüfen ob §37b Pauschalversteuerung durch YL. Wenn nicht: Marktwert versteuern!"
+  },
+  "YL Incentive Silver Retreat": {
+    "category": "Sachbezüge (Incentive-Reisen)",
+    "eur_account": "8400",
+    "keywords": ["silver retreat", "yl silver", "yl retreat silver"],
+    "vat_rate": 0,
+    "notes": "GELDWERTER VORTEIL! §37b prüfen. Typischer Wert: 1.500-2.500 EUR"
+  },
+  "YL Incentive Gold Retreat": {
+    "category": "Sachbezüge (Incentive-Reisen)",
+    "eur_account": "8400",
+    "keywords": ["gold retreat", "yl gold", "yl retreat gold"],
+    "vat_rate": 0,
+    "notes": "GELDWERTER VORTEIL! §37b prüfen. Typischer Wert: 2.500-4.000 EUR"
+  },
+  "YL Incentive Platinum Trip": {
+    "category": "Sachbezüge (Incentive-Reisen)",
+    "eur_account": "8400",
+    "keywords": ["platinum trip", "yl platinum", "platinum retreat"],
+    "vat_rate": 0,
+    "notes": "GELDWERTER VORTEIL! §37b prüfen. Typischer Wert: 4.000-6.000 EUR"
+  },
+  "YL Leadership Cruise": {
+    "category": "Sachbezüge (Incentive-Reisen)",
+    "eur_account": "8400",
+    "keywords": ["leadership cruise", "yl cruise", "young living cruise"],
+    "vat_rate": 0,
+    "notes": "GELDWERTER VORTEIL! §37b prüfen. Typischer Wert: 3.000-5.000 EUR"
+  },
+  "YL Convention": {
+    "category": "Sachbezüge (Incentive-Reisen)",
+    "eur_account": "8400",
+    "keywords": ["yl convention", "young living convention", "yl annual convention"],
+    "vat_rate": 0,
+    "notes": "Gemischte Veranstaltung! Schulungs- vs. Incentive-Anteil aufteilen. §37b prüfen!"
+  },
+  "doTERRA Presidential Diamond Trip": {
+    "category": "Sachbezüge (Incentive-Reisen)",
+    "eur_account": "8400",
+    "keywords": ["doterra presidential", "doterra diamond trip", "presidential diamond"],
+    "vat_rate": 0,
+    "notes": "GELDWERTER VORTEIL! §37b prüfen. doTERRA MLM Incentive."
+  },
+  "doTERRA Founders Club": {
+    "category": "Sachbezüge (Incentive-Reisen)",
+    "eur_account": "8400",
+    "keywords": ["doterra founders", "founders club", "doterra retreat"],
+    "vat_rate": 0,
+    "notes": "GELDWERTER VORTEIL! §37b prüfen."
+  },
+  "MLM Incentive Trip Generic": {
+    "category": "Sachbezüge (Incentive-Reisen)",
+    "eur_account": "8400",
+    "keywords": ["incentive trip", "incentive reise", "reward trip", "recognition trip"],
+    "vat_rate": 0,
+    "notes": "GELDWERTER VORTEIL! Immer §37b-Status beim Zuwendenden klären!"
+  },
+  "MLM Leadership Event": {
+    "category": "Sachbezüge (Incentive-Reisen)",
+    "eur_account": "8400",
+    "keywords": ["leadership event", "top performer trip", "achievers trip"],
+    "vat_rate": 0,
+    "notes": "GELDWERTER VORTEIL! §37b prüfen. Bei Übernachtung = Incentive-Reise!"
+  },
+  "Royal Caribbean Cruise (Incentive)": {
+    "category": "Sachbezüge (Incentive-Reisen)",
+    "eur_account": "8400",
+    "keywords": ["royal caribbean incentive", "cruise incentive"],
+    "vat_rate": 0,
+    "notes": "Nur wenn als MLM/Business-Incentive erhalten. Sonst: Privat!"
+  },
+  "AIDA Incentive": {
+    "category": "Sachbezüge (Incentive-Reisen)",
+    "eur_account": "8400",
+    "keywords": ["aida incentive", "aida reward"],
+    "vat_rate": 0,
+    "notes": "Nur wenn als MLM/Business-Incentive erhalten. Sonst: Privat!"
   }
 }
