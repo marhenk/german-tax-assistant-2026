@@ -184,11 +184,11 @@ async function makeRequest(endpoint, method = 'GET', data = null, retries = 3) {
 /**
  * Download binary file (receipt image/PDF)
  */
-async function downloadFile(fileId, outputPath) {
+async function downloadFile(fileId, outputPath, retries = 3) {
   await rateLimiter.consume();
-  
+
   const apiKey = loadApiKey();
-  
+
   const options = {
     hostname: BASE_URL,
     path: `/v1/files/${fileId}`,
@@ -197,38 +197,59 @@ async function downloadFile(fileId, outputPath) {
       'Authorization': `Bearer ${apiKey}`
     }
   };
-  
+
   return new Promise((resolve, reject) => {
-    const req = https.request(options, (res) => {
+    const req = https.request(options, async (res) => {
       if (res.statusCode === 404) {
+        res.resume(); // drain
         resolve(null); // File not found (no receipt attached)
         return;
       }
-      
+
+      if (res.statusCode === 429) {
+        res.resume(); // drain
+        if (retries > 0) {
+          const waitTime = Math.pow(2, 4 - retries) * 1000;
+          console.log(`   Rate limited on download. Waiting ${waitTime}ms...`);
+          await new Promise(r => setTimeout(r, waitTime));
+          try {
+            resolve(await downloadFile(fileId, outputPath, retries - 1));
+          } catch (e) {
+            reject(e);
+          }
+        } else {
+          reject(new Error('Rate limit exceeded downloading file'));
+        }
+        return;
+      }
+
       if (res.statusCode !== 200) {
+        res.resume(); // drain
         reject(new Error(`Download failed: HTTP ${res.statusCode}`));
         return;
       }
-      
+
       // Ensure directory exists
       const dir = path.dirname(outputPath);
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
-      
+
       const fileStream = fs.createWriteStream(outputPath);
       res.pipe(fileStream);
-      
+
       fileStream.on('finish', () => {
         fileStream.close();
         resolve(outputPath);
       });
+
+      fileStream.on('error', (e) => reject(new Error(`File write error: ${e.message}`)));
     });
-    
+
     req.on('error', (e) => {
       reject(new Error(`Download error: ${e.message}`));
     });
-    
+
     req.end();
   });
 }
@@ -505,6 +526,7 @@ API Documentation: https://developers.lexware.io/docs/
 }
 
 module.exports = {
+  TokenBucket,
   testAuth,
   listVouchers,
   downloadVoucher,

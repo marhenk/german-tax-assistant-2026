@@ -76,14 +76,26 @@ async function runTests() {
   // Test 1: Token bucket rate limiting
   console.log('\n1️⃣  Testing Token Bucket Rate Limiting...');
   try {
-    const { TokenBucket } = await import('./lexware-connector.js');
-    
-    // This won't work since TokenBucket is internal class
-    // We'll test it indirectly through API calls
-    
-    console.log('   ⚠️  Skipping (internal class - tested via integration)');
+    const { TokenBucket } = require('./lexware-connector.js');
+
+    // Full bucket: consume immediately
+    const bucket = new TokenBucket(2, 2);
+    await bucket.consume(1);
+    assert(bucket.tokens < 2, 'Tokens should decrease after consume');
+
+    // Consuming more than capacity forces a wait (short)
+    const bucket2 = new TokenBucket(1, 100); // refills 100/s
+    await bucket2.consume(1); // drains to 0
+    const before = Date.now();
+    await bucket2.consume(1); // must wait ~10ms for refill
+    const elapsed = Date.now() - before;
+    assert(elapsed >= 5, `Should have waited for refill (waited ${elapsed}ms)`);
+
+    console.log('   ✅ PASS');
+    passed++;
   } catch (e) {
-    console.log('   ⚠️  Skipping (internal class)');
+    console.log(`   ❌ FAIL: ${e.message}`);
+    failed++;
   }
   
   // Test 2: API key loading/saving
@@ -229,11 +241,21 @@ async function runTests() {
   console.log('\n8️⃣  Testing Receipt Registration Integration...');
   try {
     const { generateReceiptNumber } = require('./receipt-tracking.js');
-    
-    // Verify we can generate receipt numbers
+    const registryPath = path.join(__dirname, 'receipt-registry.json');
+
+    // Snapshot registry before test to restore after
+    const registryBefore = fs.existsSync(registryPath)
+      ? fs.readFileSync(registryPath, 'utf8')
+      : null;
+
     const receiptNum = generateReceiptNumber(new Date('2024-03-15'));
     assert(receiptNum.startsWith('2024-03-'), 'Should generate correct receipt number format');
-    
+
+    // Restore registry to avoid polluting production counters
+    if (registryBefore !== null) {
+      fs.writeFileSync(registryPath, registryBefore);
+    }
+
     console.log('   ✅ PASS');
     passed++;
   } catch (e) {
