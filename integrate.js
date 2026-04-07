@@ -86,23 +86,39 @@ async function processReceipt(imagePath) {
   console.log(`   Amount: ${transaction.amount || 'Unknown'}`);
   console.log(`   Date: ${transaction.date || 'Unknown'}`);
   
-  // Step 4: Rule-based categorization
+  // Step 4: Hybrid Categorization (Rules → Gemma Fallback)
   console.log('\n4️⃣  Categorizing...');
   const ruleResult = applyCategoryRules(transaction.description || ocrText);
   
-  if (ruleResult) {
+  if (ruleResult && ruleResult.confidence >= CONFIG.confidence_threshold) {
+    // High-confidence rule match → Done!
     result.category = ruleResult.category;
     result.confidence = ruleResult.confidence;
     result.source = ruleResult.source;
     result.eur_account = ruleResult.eur_account;
-    console.log(`   Category: ${ruleResult.category}`);
+    console.log(`   ✅ Category: ${ruleResult.category}`);
     console.log(`   Confidence: ${(ruleResult.confidence * 100).toFixed(0)}%`);
-    console.log(`   Source: ${ruleResult.source}`);
+    console.log(`   Source: ${ruleResult.source} (rule-based)`);
+  } else if (ruleResult && ruleResult.confidence >= 0.7) {
+    // Medium confidence → Use rule but flag for potential Gemma fallback
+    result.category = ruleResult.category;
+    result.confidence = ruleResult.confidence;
+    result.source = ruleResult.source;
+    result.eur_account = ruleResult.eur_account;
+    console.log(`   ⚠️  Category: ${ruleResult.category}`);
+    console.log(`   Confidence: ${(ruleResult.confidence * 100).toFixed(0)}% (medium)`);
+    console.log(`   Source: ${ruleResult.source} (rule-based)`);
   } else {
-    result.category = 'Sonstige';
-    result.confidence = 0.5;
-    result.source = 'fallback';
-    console.log('   ⚠️  No rule match → Sonstige');
+    // Low/No confidence → Gemma 4 fallback
+    console.log('   ⚠️  Low confidence or no rule match → Gemma 4 fallback');
+    const gemmaResult = await categorizeWithGemma(transaction.description || ocrText);
+    result.category = gemmaResult.category;
+    result.confidence = gemmaResult.confidence;
+    result.source = 'gemma4-27b';
+    result.eur_account = gemmaResult.eur_account;
+    console.log(`   Category: ${gemmaResult.category}`);
+    console.log(`   Confidence: ${(gemmaResult.confidence * 100).toFixed(0)}%`);
+    console.log(`   Source: AI (Gemma 4)`);
   }
   
   // Step 5: MLM detection
@@ -146,6 +162,53 @@ async function processReceipt(imagePath) {
   console.log('✅ Processing complete!\n');
   
   return result;
+}
+
+/**
+ * Categorize with Gemma 4 27B (fallback)
+ */
+async function categorizeWithGemma(text) {
+  console.log('   🤖 Calling Gemma 4 27B...');
+  
+  const prompt = `Kategorisiere diese deutsche Geschäftsausgabe für die EÜR.
+Transaktion: "${text.substring(0, 200)}"
+Antworte NUR mit der Kategorie (z.B. "Lebensmittel", "KFZ", "Software", "Reisekosten", "Büromaterial", "Marketing", etc.)
+Kategorie:`;
+  
+  try {
+    const output = execSync(
+      `timeout 30 ollama run gemma4:latest "${prompt.replace(/"/g, '\\"')}" 2>/dev/null`,
+      { encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 }
+    );
+    
+    const category = output.trim().split('\n').pop().trim().substring(0, 50);
+    
+    // Map to known categories
+    const knownCategories = [
+      "Lebensmittel", "KFZ", "Reisekosten", "Software", "Büromaterial",
+      "Marketing", "Telekommunikation", "Porto/Versand", "Versicherung",
+      "Wareneinkauf (MLM)", "Provisionen (MLM)", "Team-Provisionen",
+      "Weiterbildung", "Drogerie", "Verpflegung"
+    ];
+    
+    const matchedCategory = knownCategories.find(cat => 
+      category.toLowerCase().includes(cat.toLowerCase()) ||
+      cat.toLowerCase().includes(category.toLowerCase())
+    );
+    
+    return {
+      category: matchedCategory || category,
+      confidence: matchedCategory ? 0.85 : 0.75,
+      eur_account: null // Will be filled by EÜR mapping
+    };
+  } catch (e) {
+    console.log('   ❌ Gemma timeout/error');
+    return {
+      category: 'Sonstige',
+      confidence: 0.5,
+      eur_account: null
+    };
+  }
 }
 
 /**
