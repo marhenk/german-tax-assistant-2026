@@ -40,9 +40,25 @@ const CATEGORY_RULES = [
     confidence: 0.90
   },
   {
-    pattern: /vistaprint|flyeralarm|cewe|druck|flyer|visitenkarten/i,
+    pattern: /vistaprint|flyeralarm|cewe|werbedruck|flyer|visitenkarten/i,
     category: 'Marketing',
     eur_account: '4945',
+    confidence: 0.95
+  },
+
+  // Büromaterial / Office (BEFORE Drogerie to catch "Papier Müller")
+  {
+    pattern: /staples|office depot|lyreco|bürobedarf|viking|ikea|mediamarkt|media markt|saturn elektronik|papier.*druck|druckerei/i,
+    category: 'Büromaterial',
+    eur_account: '4940',
+    confidence: 0.95
+  },
+
+  // Drogerie (AFTER Büromaterial)
+  {
+    pattern: /dm drogerie|rossmann|müller drogerie|douglas|budni|parfümerie/i,
+    category: 'Drogerie',
+    eur_account: '4930',
     confidence: 0.95
   },
 
@@ -155,7 +171,7 @@ const CATEGORY_RULES = [
     confidence: 0.90
   },
   {
-    pattern: /vistaprint|flyeralarm|cewe|druck|flyer|visitenkarten/i,
+    pattern: /vistaprint|flyeralarm|cewe|werbedruck|flyer|visitenkarten/i,
     category: 'Marketing',
     eur_account: '4945',
     confidence: 0.95
@@ -185,7 +201,21 @@ const CATEGORY_RULES = [
     confidence: 0.95
   },
   
-  // Young Living MLM-Specific
+  // MLM Income (specific patterns BEFORE generic "commission")
+  {
+    pattern: /team bonus|downline|ogv bonus|team.*provision/i,
+    category: 'Team-Provisionen',
+    eur_account: '4601',
+    confidence: 0.95
+  },
+  {
+    pattern: /incentive|reward|yl incentive|young living.*bonus/i,
+    category: 'Boni & Incentives',
+    eur_account: '4602',
+    confidence: 0.95
+  },
+  
+  // Young Living MLM-Specific (products)
   {
     pattern: /young living|youngliving|yl marketplace|essential oils|ätherische öle/i,
     category: 'Wareneinkauf (MLM)',
