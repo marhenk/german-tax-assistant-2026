@@ -15,25 +15,80 @@ const vendorDB = require('./vendor-database-v2.json');
 /**
  * Rule-based categorization patterns
  * Applied BEFORE ML model as pre-filter
+ * ORDER MATTERS: More specific patterns first!
  */
 const CATEGORY_RULES = [
+  // Weiterbildung (BEFORE Marketing to catch LinkedIn Learning)
+  {
+    pattern: /linkedin learning|udemy|coursera|vhs|ihk|weiterbildung|schulung|seminar|kurs/i,
+    category: 'Weiterbildung',
+    eur_account: '4945',
+    confidence: 0.95
+  },
+  
+  // Marketing (BEFORE Software to catch Google Ads)
+  {
+    pattern: /google ads|facebook ads|linkedin ads|meta ads|werbung|adwords|kampagne/i,
+    category: 'Marketing',
+    eur_account: '4945',
+    confidence: 0.98
+  },
+  {
+    pattern: /fiverr|upwork|99designs|freelancer/i,
+    category: 'Marketing',
+    eur_account: '4945',
+    confidence: 0.90
+  },
+  {
+    pattern: /vistaprint|flyeralarm|cewe|druck|flyer|visitenkarten/i,
+    category: 'Marketing',
+    eur_account: '4945',
+    confidence: 0.95
+  },
+
+  // Software (BEFORE KFZ to prevent JetBrains matching JET)
+  {
+    pattern: /microsoft|office 365|azure|google workspace|google cloud/i,
+    category: 'Software',
+    eur_account: '4935',
+    confidence: 0.98
+  },
+  {
+    pattern: /adobe|salesforce|zoom|slack|github|gitlab|notion|jetbrains|intellij|pycharm/i,
+    category: 'Software',
+    eur_account: '4935',
+    confidence: 0.95
+  },
+  {
+    pattern: /dropbox|asana|trello|jira|confluence/i,
+    category: 'Software',
+    eur_account: '4935',
+    confidence: 0.95
+  },
+
   // KFZ / Automotive
   {
-    pattern: /tankstelle|shell|aral|esso|total|jet|benzin|diesel|kraftstoff/i,
+    pattern: /tankstelle|shell station|aral tankstelle|esso station|total energies|benzin|diesel|kraftstoff/i,
     category: 'KFZ',
     eur_account: '4650',
     confidence: 0.95
   },
   {
-    pattern: /parkhaus|parkplatz|park-and-ride|parken/i,
+    pattern: /parkhaus|parkplatz|park-and-ride|parken|q-park/i,
     category: 'KFZ',
     eur_account: '4650',
     confidence: 0.90
   },
+  {
+    pattern: /adac|atu|tüv|tuev|hauptuntersuchung|werkstatt|inspektion/i,
+    category: 'KFZ',
+    eur_account: '4650',
+    confidence: 0.95
+  },
   
   // Reisekosten / Travel
   {
-    pattern: /hotel|airbnb|booking|hrs|hotel\.de|unterkunft/i,
+    pattern: /hotel|airbnb|booking|hrs|hotel\.de|unterkunft|marriott/i,
     category: 'Reisekosten',
     eur_account: '4671',
     confidence: 0.95
@@ -51,7 +106,13 @@ const CATEGORY_RULES = [
     confidence: 0.95
   },
   
-  // Büromaterial / Office
+  // Büromaterial / Office (BEFORE generic patterns)
+  {
+    pattern: /staples|office depot|lyreco|papier|bürobedarf|viking|ikea|mediamarkt|media markt|saturn/i,
+    category: 'Büromaterial',
+    eur_account: '4940',
+    confidence: 0.95
+  },
   {
     pattern: /amazon|ebay|otto\.de/i,
     category: 'Büromaterial',
@@ -169,7 +230,21 @@ function applyCategoryRules(description, amount = 0) {
   
   const descLower = description.toLowerCase();
   
-  // 1. Check vendor database first (exact match)
+  // 1. Apply regex rules FIRST (more specific patterns)
+  for (const rule of CATEGORY_RULES) {
+    if (rule.pattern.test(description)) {
+      return {
+        category: rule.category,
+        eur_account: rule.eur_account,
+        confidence: rule.confidence,
+        source: 'rule_based',
+        rule: rule.pattern.source,
+        note: rule.note || null
+      };
+    }
+  }
+  
+  // 2. Fallback to vendor database (keyword match)
   for (const [vendor, data] of Object.entries(vendorDB)) {
     for (const keyword of data.keywords) {
       if (descLower.includes(keyword.toLowerCase())) {
@@ -183,20 +258,6 @@ function applyCategoryRules(description, amount = 0) {
           note: data.notes || null
         };
       }
-    }
-  }
-  
-  // 2. Apply regex rules (pattern matching)
-  for (const rule of CATEGORY_RULES) {
-    if (rule.pattern.test(description)) {
-      return {
-        category: rule.category,
-        eur_account: rule.eur_account,
-        confidence: rule.confidence,
-        source: 'rule_based',
-        rule: rule.pattern.source,
-        note: rule.note || null
-      };
     }
   }
   
